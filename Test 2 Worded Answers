@@ -1,6 +1,16 @@
 Question 1
+Using regex I was able to implement an algorithm that reads eacch string, checks to see if it returns true for
+the regex rule it was compared to, and outputs the original string along with its assigned token. If the string
+did not fit any of the rules it was assigned Invalid. 
+
 
 Question 2
+The array is bound to memory cells before program execution began and remained unbound to those memory cells, 
+so it makes sense that it does not take long for the Static function to execute. Compared to Heap which took 
+much longer as heap is a disorganized collection of storage cells, and a variable allocated fromt he heap can
+only be referenced through a pointer. This is why creating arrays of the same size from the heap require a 
+significant amount of time compared to the static and stack array. 
+
 
 Question 3
 <stmt> →  <op> <var> <stmt>
@@ -13,13 +23,14 @@ Any bottom-up parser would suffice as the process of a bottom-up parser starts w
 and produces the sequence of sentential form there until all that remains is the start symbol. For example,
 A+B/C*D would be read in preorder form which is +AB/*CD and from there would be parsed bottom-up. 
 
+
 Question 4
 Static scoping which was introduced in ALGOL 60 is the method of binding names to nonlocal variables. 
 It is named that because the scope of a variable can be statically determined prior to the execution.
 Dynamic scoping only occurs if the first binding occurs during runtime and could change in the course of 
-program execution. With dnyamic type binding 
-It would not matter for both and dynamic scoping because the symbol table would be different for both, 
-so the type of scoping would not change the answer. 
+program execution. With dnyamic type binding it would not matter for both and dynamic scoping because 
+the symbol table would be different for both, so the type of scoping would not change the answer. 
+
 
 Question 5
 I would implement a hashmap or a heap in which I would implement a fucntion that would read a fle and
@@ -27,21 +38,27 @@ compare the strings and character values to the hashmap or heap in order to anal
 I would allow users to add their own reserved words to the hashmap or heap. Nothing would change in the 
 code besides that added fucntion.
 
+
 Question 6
 <while_stmt> → "while" "(" <bool_stmt> ")" "{" <block> "}"
+
 <if_stmt> → "if" "(" <bool_stmt> ")" [<stmt> | "{" <block> "}"]
 {["else" "if" "(" <bool_stmt> ")" [<stmt | "{" <block> "}" ]]}
 (["else" [<stmt> | "{" <block> "}"])
-<assign> → <var> "=" [<var> | <const> | <func> | "null"]
 <block> → {<stmt>}
-<stmt> →  <op> <var> <stmt>
-<stmt> →  <op> <var> <var>
+
+<assign> → <var> "=" [<var> | <const> | <func> | "null"]
+
+<stmt> →  <op> <var> [<stmt> | <var>]
 <letter> → [A-Z|a-z]{<num>} 
 <var> → [<letter>|<num>] 
 <op> → [‘+’|‘-’|‘/’|‘*’|‘%’] 
 <num> → [0-9]{<num>}
 
+
 Question 7
+
+
 
 Question 8
 In static scoping the variable always refers to its top level environment, which is just a property of
