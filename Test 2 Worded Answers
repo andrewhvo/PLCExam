@@ -1,7 +1,8 @@
 Question 1
 Using regex I was able to implement an algorithm that reads eacch string, checks to see if it returns true for
-the regex rule it was compared to, and outputs the original string along with its assigned token. If the string
-did not fit any of the rules it was assigned Invalid. 
+the regex rule it was compared to, and outputs the original lexeme along with its assigned token. For example,
+the lexeme $pearl_id would be recognized by the prefix '$' and a single '_' followed by characters. It would then
+be converted to the token "Perl". If the string did not fit any of the rules it was assigned Invalid. 
 
 
 Question 2
@@ -40,15 +41,17 @@ code besides that added fucntion.
 
 
 Question 6
+Java while statement ENBF
 <while_stmt> → "while" "(" <bool_stmt> ")" "{" <block> "}"
 
+Java if Statement EBNF
 <if_stmt> → "if" "(" <bool_stmt> ")" [<stmt> | "{" <block> "}"]
-{["else" "if" "(" <bool_stmt> ")" [<stmt | "{" <block> "}" ]]}
-(["else" [<stmt> | "{" <block> "}"])
 <block> → {<stmt>}
 
+Logical/Mathematical expression EBNF
 <assign> → <var> "=" [<var> | <const> | <func> | "null"]
 
+Mathematical assignment statement EBNF
 <stmt> →  <op> <var> [<stmt> | <var>]
 <letter> → [A-Z|a-z]{<num>} 
 <var> → [<letter>|<num>] 
