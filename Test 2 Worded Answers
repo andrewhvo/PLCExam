@@ -6,9 +6,9 @@ be converted to the token "Perl". If the string did not fit any of the rules it 
 
 
 Question 2
-The array is bound to memory cells before program execution began and remained unbound to those memory cells, 
+The array is bound to memory cells before program execution begins and remains unbound to those memory cells, 
 so it makes sense that it does not take long for the Static function to execute. Compared to Heap which took 
-much longer as heap is a disorganized collection of storage cells, and a variable allocated fromt he heap can
+much longer as heap is a disorganized collection of storage cells, and a variable allocated from the heap can
 only be referenced through a pointer. This is why creating arrays of the same size from the heap require a 
 significant amount of time compared to the static and stack array. 
 
@@ -58,7 +58,11 @@ Mathematical assignment statement EBNF
 
 
 Question 7
-
+Beginning with a statement, if the token is assi code it would be checked for var or funct. If it is an if statement
+it would be checked for open parathensis, a boolean expression, closed parenthesis, open brackets, a block,
+blocked brackets and then a potentential else or else if statement in which case it would cycle back through again.
+If it is a while statement, it would be checked for open paranthesis, a boolean expression, closed paranthesis,
+open brackets, a bock statement, and then closed backeets.
 
 
 Question 8
